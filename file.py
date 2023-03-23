@@ -73,6 +73,9 @@ data['all_text'] = data[['text_clean', 'desc_clean']].apply(lambda x: \
 x = vectorizer.fit_transform(data['all_text'])
 y = encoder.fit_transform(data['gender'])
 nb = MultinomialNB()
+scores = cross_val_score(nb, x, y, cv=10)
+print(scores)
+print(np.mean(scores))
 acc = []
 pre = []
 recall = []
