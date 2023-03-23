@@ -71,6 +71,7 @@ encoder = LabelEncoder()
 data['all_text'] = data[['text_clean', 'desc_clean']].apply(lambda x: \
         ' '.join(x), axis=1)
 x = vectorizer.fit_transform(data['all_text'])
+y = encoder.fit_transform(data['gender'])
 nb = MultinomialNB()
 acc = []
 pre = []
