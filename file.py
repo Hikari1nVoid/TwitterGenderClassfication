@@ -89,7 +89,7 @@ for i in range(10):
     pre.append(precision_score(y_test, ypred))
     recall.append(recall_score(y_test, ypred))
 print("result:\n")
-print(acc)
+print(max(acc))
 print()
 print(np.mean(acc))
 print()
