@@ -87,9 +87,8 @@ for i in range(10):
     acc.append(nb.score(x_test, y_test))
     pre.append(precision_score(y_test, ypred))
     recall.append(recall_score(y_test, ypred))
-
-print acc
-print np.mean(acc)
-print np.mean(pre)
-print np.mean(recall)
-print duration[0]
+print(acc)
+print(np.mean(acc))
+print(np.mean(pre))
+print(np.mean(recall))
+print(duration[0])
